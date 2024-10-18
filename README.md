@@ -4,7 +4,7 @@ A way to live in the past of the future.
 
 ## Seeing it in Action
 
-[Visit the non-interactive demo of maildir-ai in action.](file:///home/rescrv/src/maildir_ai/35.html)
+[Visit the non-interactive demo of maildir-ai in action.](https://rescrv.net/maildir.ai/35.html)
 
 ## What is maildir-ai?
 
