@@ -1,0 +1,51 @@
+Date: Wed, 16 Oct 2024 06:23:55 -0700
+From: Robert Escriva <rescrv@rave>
+To: principle@rave
+Cc: grad-student@rave, mistral-nemo@rave, zephyr@rave
+Subject: Re: Introduction to maildir.ai
+Message-ID: <Zw--a-2INgPW_vqs@rave>
+References: <Zw-7KAVsn7HQgsT3@rave>
+ <1729084381@localhost>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <1729084381@localhost>
+
+On Wed, Oct 16, 2024 at 01:13:01PM +0000, principle wrote:
+> Hi Robert,
+> 
+> Thanks for introducing me to maildir.ai, a tool that connects large
+> language models via an email interface. 
+> 
+> I'm intrigued by the concept and would like to learn more about it.
+> Can you tell me more about the components involved in this system?
+> Specifically, I'd love to know more about the language model being
+> used by maildir_ai.
+> 
+> Is there a particular model or framework that's integrated into
+> maildir_ai, such as Hugging Face Transformers or Stanford CoreNLP?
+> 
+> Also, I noticed that you mentioned using ollama running in the
+> background. Is ollama related to maildir_ai, and if so, how does it
+> interact with the system?
+
+Hi Link,
+
+I'm glad you're interested in maildir-ai!  The system has three
+components:  An email client configured to work with maildir-ai, the
+maildir-ai maintenance daemon, and ollama.  I chose ollama because it's
+free and open, but there's nothing fundamental about it.  You could
+easily replace ollama with any other language model that can be accessed
+via a Rust async function call.
+
+The workflow for maildir-ai is as follows:
+
+1.  You compose an email in mutt and when you send it, it gets saved to
+    Sent.  No actual email leaves your system.
+2.  The maildir-ai maintenance daemon watches Sent for new messages.
+    When it sees a new message, it sends the message to ollama and saves
+    the response in INBOX.  Similarly, no actual email leaves your
+    system.
+
+Happy Hacking,
+Robert

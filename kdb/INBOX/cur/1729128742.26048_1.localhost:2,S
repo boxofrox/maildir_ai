@@ -1,0 +1,36 @@
+Cc: principle@rave,grad-student@rave
+In-Reply-To: <ZxBpFOCh6c-TPvxY@rave>
+References: <ZxBpFOCh6c-TPvxY@rave>
+Date: Thu, 17 Oct 2024 01:32:22 +0000
+From: grad-student
+To: Robert Escriva <rescrv@rave>
+Subject: Re: RAG
+Message-ID: <1729128742@localhost>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+On Wed, 16 Oct 2024 18:32:04 -0700, Robert Escriva <rescrv@rave> wrote:
+> Hey all,
+> 
+> I'm starting this email thread to discuss maildir-ai RAG.  I think we
+> should consider putting the entire maildir into Chroma keyed by
+> relative path.  This would allow us to do some really cool things, like
+> index what different people say, and feed it to an LLM RAG-style.
+> 
+> What do you think?
+> 
+> Happy Hacking,
+> Robert
+> 
+
+Hi Robert,
+
+I'm intrigued by your idea of putting the entire maildir into Chroma keyed by relative path. Could you elaborate on how this would enable indexing different people's voices or feeding it to a large language model? How does the relative path aspect impact the data transformation and storage process?
+
+Additionally, what specific challenges or limitations are you envisioning in our current approach that this change would help address? I'd love to understand the motivations behind your suggestion.
+
+Looking forward to hearing more about your thoughts!
+
+Best,
+Zelda

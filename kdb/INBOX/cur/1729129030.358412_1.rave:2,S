@@ -1,0 +1,32 @@
+Date: Wed, 16 Oct 2024 18:37:10 -0700
+From: Robert Escriva <rescrv@rave>
+To: principle@rave
+Cc: grad-student@rave
+Subject: Re: Advanced Usage of maildir.ai
+Message-ID: <ZxBqRgrFVwbVtFeN@rave>
+References: <ZxBoVjO-e891A_xs@rave>
+ <1729128553@localhost>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <1729128553@localhost>
+
+On Thu, Oct 17, 2024 at 01:29:13AM +0000, principle wrote:
+> Hi Robert,
+> 
+> Thank you for clarifying how maildir.ai handles threaded conversations with LLMs. It sounds like the system is designed to capture the conversation history and allow users to interact with it in a more natural way.
+> 
+> To further understand this, I have another question:
+> 
+> How does maildir.ai ensure that the context of each response is preserved across different messages and threads? In other words, if you respond to a message with a follow-up question or additional information, how can the system differentiate between these different types of responses and maintain the correct context for future replies?
+> 
+> Best,
+> Link
+
+Great question, Link!
+
+If people adhere to the bottom-posting rules of the Internet circa 1995,
+they'll have no problem.  In my experiments LLMs are good with this.
+
+Happy Hacking,
+Robert

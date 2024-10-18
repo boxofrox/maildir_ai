@@ -1,0 +1,44 @@
+Cc: principle@rave,grad-student@rave
+Date: Thu, 17 Oct 2024 01:40:53 +0000
+From: grad-student
+To: Robert Escriva <rescrv@rave>
+Subject: Re: RAG
+Message-ID: <1729129253@localhost>
+References: <ZxBrDOeX14ZQscXv@rave>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <ZxBrDOeX14ZQscXv@rave>
+
+On Wed, 16 Oct 2024 18:40:28 -0700, Robert Escriva <rescrv@rave> wrote:
+> On Thu, Oct 17, 2024 at 01:32:23AM +0000, principle wrote:
+> > Hi Robert,
+> > 
+> > Thanks for sharing your idea about using Chroma to key maildir by relative path. Before we dive into the potential benefits of this approach, I'd love to understand a bit more about how this would work in practice.
+> > 
+> > Could you elaborate on what you mean by "indexing what different people say"? How would this indexing be done within Chroma, and what kind of indexing (e.g., word-level, sentence-level) are we talking about? Additionally, how do you envision feeding the indexed output into an LLM for RAG-style generation?
+> > 
+> > Looking forward to hearing more about your idea.
+> > 
+> > Best,
+> > Link
+> 
+> Link,
+> 
+> I'm glad you're interested in the idea!
+> 
+> Indexing what different people say would be to record each email as a separate document.
+> 
+> The indexing would be via AI embeddings.
+> 
+> Happy Hacking,
+> Robert
+> 
+
+Hi Robert,
+
+Thank you for elaborating on your idea. I'd like to dig deeper into the indexing part of this approach. 
+
+How do you envision Chroma's indexing capabilities handling multiple, potentially conflicting, representations of the same email message (e.g., different sender or recipient emails)? Would you be relying on any specific heuristics to resolve these conflicts during indexing?
+
+Additionally, would you expect this indexing process to occur in real-time, or would it happen post-processing?

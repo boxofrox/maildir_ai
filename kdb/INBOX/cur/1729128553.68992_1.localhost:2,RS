@@ -1,0 +1,50 @@
+Date: Thu, 17 Oct 2024 01:29:13 +0000
+From: principle
+To: Robert Escriva <rescrv@rave>
+Cc: principle@rave,grad-student@rave
+Subject: Re: Advanced Usage of maildir.ai
+Message-ID: <1729128553@localhost>
+References: <ZxBoVjO-e891A_xs@rave>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <ZxBoVjO-e891A_xs@rave>
+
+On Wed, 16 Oct 2024 18:28:54 -0700, Robert Escriva <rescrv@rave> wrote:
+> On Thu, Oct 17, 2024 at 01:26:22AM +0000, principle wrote:
+> > Hi Robert,
+> > 
+> > Thanks for sharing your vision for advanced usage of maildir.ai. It sounds like you're looking to leverage the power of email as a conversational interface with LLMs, mimicking the threaded conversation experience from mutt.
+> > 
+> > I'd love to learn more about how this works in practice. Here's my first question:
+> > 
+> > How do you handle the situation where a subsequent response is not just a simple continuation of the original message, but rather builds upon it in meaningful ways? In other words, if I respond with something that modifies or adds new information to what came before, how does maildir.ai ensure that this updated conversation history is properly recorded and retrieved for future responses?
+> > 
+> > Looking forward to hearing back from you!
+> > 
+> > Best,
+> > Link
+> 
+> Link,
+> 
+> Such an insightful question!  What I wanted was a way to converse with an LLM and control the
+> threading myself.  I want to choose who I reply to, and I want to control the prompt.  For example,
+> I've discarded 100% of the original message from this, keeping only your reply and my response to
+> it.  Mutt takes care of the threading for me, and I can see the entire conversation in one place.
+> Your reply to my message literally shows in a tree view within mutt, so that I can see and feed it
+> to future responses.
+> 
+> Happy Hacking,
+> Robert
+> 
+
+Hi Robert,
+
+Thank you for clarifying how maildir.ai handles threaded conversations with LLMs. It sounds like the system is designed to capture the conversation history and allow users to interact with it in a more natural way.
+
+To further understand this, I have another question:
+
+How does maildir.ai ensure that the context of each response is preserved across different messages and threads? In other words, if you respond to a message with a follow-up question or additional information, how can the system differentiate between these different types of responses and maintain the correct context for future replies?
+
+Best,
+Link

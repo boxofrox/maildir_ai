@@ -1,0 +1,31 @@
+Date: Wed, 16 Oct 2024 18:35:57 -0700
+From: Robert Escriva <rescrv@rave>
+To: principle@rave, grad-student@rave
+Subject: Workflows
+Message-ID: <ZxBp_aoUlArcB1Fd@rave>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Hey all,
+
+I'm starting this thread to brainstorm ways that we can improve the
+results from models.  For example, I have never met someone who answers
+100% of their email, and models shouldn't either.  Models should be able
+to say "I don't know" when they don't have enough information to make a
+coherent response and should be able to ask for more information when
+they need it.
+
+Further, it should be easy to specify workflows that pipe the output of
+one model into another for ranking.  We could then say things like,
+"Iterate for one hour and give me the top three results," or, "Iterate
+until some metric converges."
+
+Given the throughput-oriented nature of email it makes sense to be able
+to put a large number of operations in a pipeline and have them run in
+the background.
+
+I'm going to start working on this, but I wanted to get some feedback.
+
+Happy Hacking,
+Robert

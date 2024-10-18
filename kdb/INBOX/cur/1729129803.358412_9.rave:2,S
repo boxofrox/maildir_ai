@@ -1,0 +1,45 @@
+Date: Wed, 16 Oct 2024 18:50:03 -0700
+From: Robert Escriva <rescrv@rave>
+To: principle@rave
+Cc: grad-student@rave
+Subject: Re: Workflows
+Message-ID: <ZxBtSw4GCn-C-uhS@rave>
+References: <ZxBsgV8SrBuYxwhy@rave>
+ <1729129636@localhost>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <1729129636@localhost>
+
+On Thu, Oct 17, 2024 at 01:47:16AM +0000, principle wrote:
+> Hi Robert,
+> 
+> Thanks for the detailed explanation of your component. I'm curious about the implementation details of this state machine. 
+> 
+> Can you elaborate on how the local key-value store is chosen and implemented? Is it something built into the system, or a custom solution like Redis or another in-memory database?
+> 
+> Also, how does the state machine handle concurrent updates to the same data? Would it use locks, optimistic concurrency control, or some other mechanism to ensure consistency across multiple threads?
+> 
+> Lastly, are there any plans to scale this component beyond a single node? How would you approach sharding and distributing the workload across multiple instances of the state machine?
+> 
+> Best,
+> Link
+
+Hi Link,
+
+Great questions!
+
+The key-value store would probably be lsmtk.  This is a custom solution
+that we've been working on for a while.  It's a log-structured merge
+tree that's optimized for our use case.  It's not as general-purpose as
+Redis, but it's much faster for our workloads.
+
+Regarding concurrent updates, it is a single process that would
+coordinate in-memory updates to the state machine.  We would then
+persist only the state necessary to recover the in-memory structure.
+
+To scale this beyond a single node, I'd make the maintain service run
+across a pool of Ollama hosts.  That's the scalability bottleneck.
+
+Happy Hacking,
+Robert

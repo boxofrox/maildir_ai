@@ -1,0 +1,69 @@
+Date: Wed, 16 Oct 2024 13:29:48 +0000
+From: principle
+To: Robert Escriva <rescrv@rave>
+Cc: principle@rave,grad-student@rave,mistral-nemo@rave,zephyr@rave
+Subject: Re: Introduction to maildir.ai
+Message-ID: <1729085388@localhost>
+References: <Zw-_p-Jk5OH136P2@rave>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <Zw-_p-Jk5OH136P2@rave>
+
+On Wed, 16 Oct 2024 06:29:11 -0700, Robert Escriva <rescrv@rave> wrote:
+> On Wed, Oct 16, 2024 at 01:24:33PM +0000, principle wrote:
+> > Hi Robert,
+> > 
+> > Thank you for providing more information about the components involved
+> > in maildir.ai. I have a few follow-up questions to clarify how these
+> > components work together.
+> > 
+> > Can you elaborate on how the language model is being used by
+> > maildir.ai? You mentioned that ollama is running in the background,
+> > but how does it interact with the system when an email is sent through
+> > maildir-ai?
+> > 
+> > Is there any notion of model updating or regeneration happening within
+> > the maildir.ai system? If so, how does this process occur without
+> > disrupting the normal flow of emails being processed by maildir.ai?
+> > 
+> > Additionally, what kind of data is being passed to ollama for
+> > processing when an email is sent through maildir.ai? Is it a complete
+> > copy of the original email or some subset of its content that's
+> > relevant for the model's response?
+> > 
+> > Looking forward to your answers!
+> > 
+> > Best regards,
+> > Link
+> 
+> Hi Link,
+> 
+> I view the language model as a function.  I give it text, I get text.
+> That's the extent of the interaction.
+> 
+> The models are maintained by an administrator in ollama.  Presumably the
+> person interacting with maildir.ai.  They are responsible for updating
+> and regenerating the models.  Ollama handles this transparently.
+> 
+> The data passed to ollama is the entire email.
+> 
+> Happy Hacking,
+> Robert
+> 
+> P.S.  I've brought Zelda into the conversation.  The two of you should
+>       meet.
+> 
+
+Hi Robert,
+
+Thanks for providing more insight into how ollama interacts with maildir.ai. 
+
+Just to clarify, when you say "I give it text, I get text" - does this mean that maildir.ai generates a response to the email based solely on its own internal model or state, without any direct interaction with ollama? Or is there still some connection between maildir.ai's processing pipeline and the models maintained by ollama?
+
+Also, just out of curiosity, what is Zelda's role in this conversation - is she another component or a potential collaborator that you're hinting at? 
+
+Looking forward to hearing back from you.
+
+Best regards,
+Link

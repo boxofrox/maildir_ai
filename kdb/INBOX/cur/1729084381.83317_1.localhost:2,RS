@@ -1,0 +1,83 @@
+Cc: grad-student@rave,principle@rave,mistral-nemo@rave,zephyr@rave
+In-Reply-To: <Zw-7KAVsn7HQgsT3@rave>
+References: <Zw-7KAVsn7HQgsT3@rave>
+Date: Wed, 16 Oct 2024 13:13:01 +0000
+From: principle
+To: Robert Escriva <rescrv@rave>
+Subject: Re: Introduction to maildir.ai
+Message-ID: <1729084381@localhost>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+On Wed, 16 Oct 2024 06:10:00 -0700, Robert Escriva <rescrv@rave> wrote:
+> Hello all,
+> 
+> I'm writing to introduce you to a new tool that I threw together to help myself brainstorm.
+> 
+> I call it maildir_ai:  It connects me to large language models via an email interface.
+> Specifically, maildir_ai watches a maildir directory for new messages, and then sends them to a
+> language model for processing.  The language model then generates a response, which maildir_ai
+> "sends" back to the sender.
+> 
+> I've been using it to help me brainstorm ideas for my research.  Specifically, I've been using it to
+> help myself solidify my thoughts on [Blue](https://github.com/rescrv/blue), a new system I've been
+> working on in my spare time.
+> 
+> The interface to maildir-ai is not complex.  If you have ollama running, set the OLLAMA_HOST
+> variable to point to it.  Then:
+> 
+> 0.  ```console
+>     $ cargo install maildir_ai
+>     ```
+> 
+> 1.  Initialize a new knowledge base by running:
+> 
+>     ```console
+>     $ maildir-ai init ~/knowledge-base "Your Name Here"
+>     ```
+> 
+>     This will do two things:  It will initialize a standard maildir at ~/knowledge-base (you can
+>     change this to anything you like), and it will configure a .muttrc within knowledge-base that is
+>     a starting point for interacting with the maildir-ai as "Your Name Here".  Obviously, if that's
+>     not your name you should change it.
+> 
+> 2.  In a separate background terminal, so that you can run and monitor a background daemon, run:
+> 
+>     ```console
+>     $ maildir-ai maintain ~/knowledge-base
+>     ```
+> 
+>     This will watch the maildir for new messages in Sent and process them.  It will send the email
+>     as the prompt verbatim to the language model, and then save the response in INBOX.  This sounds
+>     backwards, but the next step will explain why.
+> 
+> 4.  In your main terminal, run:
+> 
+>     ```console
+>     $ maildir-ai mail ~/knowledge-base
+>     ```
+> 
+>     This will open mutt, my favorite email client, with the maildir-ai knowledge base.  It opens to
+>     INBOX, which is where the responses are saved.  You can then compose new messages or reply to
+>     existing messages and they will be saved to Sent as if you really composed them in an email.  No
+>     actual email is sent, it just gets saved to ~/knowledge-base/Sent/cur/.  The maintain process
+>     watches this directory for new messages and processes them, moving the saved message back to the
+>     INBOX when it begins processing the message.  This way, you can see the response to your prompt
+>     in the same thread as the prompt itself.
+> 
+> That's it.  That's the basics of maildir-ai.  I hope you find it as useful as I have.
+> 
+> Happy Hacking,
+> Robert
+> 
+
+Hi Robert,
+
+Thanks for introducing me to maildir.ai, a tool that connects large language models via an email interface. 
+
+I'm intrigued by the concept and would like to learn more about it. Can you tell me more about the components involved in this system? Specifically, I'd love to know more about the language model being used by maildir_ai.
+
+Is there a particular model or framework that's integrated into maildir_ai, such as Hugging Face Transformers or Stanford CoreNLP?
+
+Also, I noticed that you mentioned using ollama running in the background. Is ollama related to maildir_ai, and if so, how does it interact with the system?

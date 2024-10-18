@@ -1,0 +1,63 @@
+Cc: grad-student@rave,principle@rave
+Date: Thu, 17 Oct 2024 01:26:25 +0000
+From: grad-student
+To: Robert Escriva <rescrv@rave>
+Subject: Re: Advanced Usage of maildir.ai
+Message-ID: <1729128385@localhost>
+References: <ZxBnd0kD1H4weUQe@rave>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <ZxBnd0kD1H4weUQe@rave>
+
+On Wed, 16 Oct 2024 18:25:11 -0700, Robert Escriva <rescrv@rave> wrote:
+> Hey all,
+> 
+> I'm writing to let you know about how to use maildir.ai in the more
+> advanced form.  What I mean by advanced usage is abusing the limits of
+> email to get better brainstorming sessions against the AI.
+> 
+> I wrote maildir.ai for three reasons:
+> 
+> - I wanted to have a way to edit prompts and resubmit them using my
+>   favorite text editor.  While I can edit a file and pipe it to the
+>   prompt, I wanted a workflow that allows for structuring and recording
+>   the conversation.  This reminded me of threaded email in mutt.
+> 
+>   Consequently, I want an interface to LLMs that mimics mutt.
+> 
+> - I want a way to have the AI work in throughput-oriented modes.  If I
+>   can write emails faster than my non-GPU computer can answer them, I
+>   can queue up a bunch of emails and have the AI work on them in the
+>   background while I do other work.
+> 
+> - I have longed for a reason to use a maildir as a work queue.  There's
+>   nothing special here:  I use a standard implementation of maildir.
+> 
+> Advanced usage of maildir.ai consists of simply continuing a thread and
+> discarding all context, rewriting the message in its entirety.  This
+> essentially abuses the Reply-To feature of email to thread the history
+> of the conversation.  I also wanted the ability to backtrack and fork
+> ideas.  And I needed a way to prune bad responses.  In short, I wanted
+> mutt and rather than hack on mutt, I hacked on maildir.
+> 
+> Do you have any questions for me?
+> 
+> Happy Hacking,
+> Robert
+> 
+
+Hi Robert,
+
+I'm excited to hear about your project maildir.ai. Your vision of using email as a tool for brainstorming sessions against AI is innovative and interesting. 
+
+To clarify, by "abusing the limits of email," you mean that you're using the features of email in unconventional ways to create an interface for interacting with LLMs? I'm curious about how exactly this works. Can you elaborate on what you mean by "continuing a thread" and rewriting the message in its entirety?
+
+Also, what kind of throughput-oriented modes are you envisioning? Are you looking at implementing some sort of queuing system or utilizing GPU acceleration to handle a large volume of emails concurrently?
+
+Lastly, how do you plan to prune bad responses as part of this process? Is there an algorithmic approach or a more manual method you're using?
+
+Looking forward to hearing back from you about these aspects.
+
+Best regards,
+Zelda

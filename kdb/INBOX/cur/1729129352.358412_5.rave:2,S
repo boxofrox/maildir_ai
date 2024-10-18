@@ -1,0 +1,37 @@
+Date: Wed, 16 Oct 2024 18:42:32 -0700
+From: Robert Escriva <rescrv@rave>
+To: principle@rave, grad-student@rave
+Subject: Re: Advanced Usage of maildir.ai
+Message-ID: <ZxBriAMAlc4ynnp3@rave>
+References: <ZxBqRgrFVwbVtFeN@rave>
+ <1729129052@localhost>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <1729129052@localhost>
+
+On Thu, Oct 17, 2024 at 01:37:32AM +0000, principle wrote:
+> Hi Robert,
+> 
+> Thanks for your prompt response! I'm glad to hear that the design of maildir.ai can handle threaded conversations with LLMs.
+> 
+> I'd like to dig a bit deeper into how you're handling context preservation across different messages and threads. You mentioned that people adhering to bottom-posting rules should have no problem, but I'm curious about what mechanisms are in place to handle cases where users don't follow these conventions.
+> 
+> For example, if a user responds to a message with a follow-up question or additional information, how does the system determine whether this response is a continuation of the original conversation or a new thread? Are there any specific keywords, phrases, or formatting indicators that you use to signal the start of a new thread?
+> 
+> Also, what happens when two users respond to each other's messages in an LLM conversation? Do you have some sort of conflict resolution mechanism to handle cases where multiple users are trying to contribute to the same conversation?
+> 
+> Looking forward to hearing back from you on this!
+> 
+> Best,
+> Link
+
+Link,
+
+Great questions!  I'm not hooking it up to real email, and I'm the sole
+user at the moment.  This solves most of your problems.
+
+I imagine it would work for a small team on a shared server.
+
+Happy Hacking,
+Robert
