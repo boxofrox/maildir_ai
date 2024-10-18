@@ -1,12 +1,15 @@
 [package]
 name = "maildir_ai"
 version = "0.1.0"
+authors = ["Robert Escriva <robert@rescrv.net>"]
 edition = "2021"
+description = "maildir_ai connects a maildir to your LLMs"
+license = "Apache-2.0"
 
 [dependencies]
-chrono = "0.4.38"
-getopts = "0.2.21"
-tokio = "1.40.0"
+chrono = "0.4"
+getopts = "0.2"
+tokio = "1.40"
 
 arrrg = "0.5"
 arrrg_derive = "0.5"
