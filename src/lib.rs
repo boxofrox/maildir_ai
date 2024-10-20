@@ -216,8 +216,6 @@ async fn process_one(
         } else {
             line.chars().count() - line.trim_start().chars().count()
         };
-        println!("indent: {}", indent);
-        println!("line: {}", line);
         for word in line.split_whitespace() {
             if wrapped.len() + word.len() - offset > 72 {
                 wrapped.push('\n');
