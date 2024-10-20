@@ -208,7 +208,36 @@ async fn process_one(
         .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidData, format!("{:?}", e)))?;
     let mut email = format_reply(&to, email)?;
     email.push_str("\n\n");
-    email += &buf;
+    fn wrap_line(line: &str) -> String {
+        let mut offset = 0usize;
+        let mut wrapped = String::new();
+        let indent = if line.trim_start().starts_with("* ") {
+            line.chars().count() - line.trim_start().chars().count() - 2
+        } else {
+            line.chars().count() - line.trim_start().chars().count()
+        };
+        println!("indent: {}", indent);
+        println!("line: {}", line);
+        for word in line.split_whitespace() {
+            if wrapped.len() + word.len() - offset > 72 {
+                wrapped.push('\n');
+                offset = wrapped.len();
+                wrapped.push_str(&" ".repeat(indent));
+            }
+            wrapped += word;
+            wrapped.push(' ');
+        }
+        wrapped.push('\n');
+        wrapped
+    }
+    fn wrap_answer(answer: &str) -> String {
+        let mut wrapped = String::new();
+        for line in answer.lines() {
+            wrapped += &wrap_line(line);
+        }
+        wrapped
+    }
+    email += &wrap_answer(&buf);
     Ok(email)
 }
 
@@ -235,7 +264,7 @@ impl Header {
         let mut headers = vec![];
         let mut current_line = "".to_string();
         for line in header_block.as_ref().lines() {
-            if line.starts_with(' ') {
+            if line.starts_with(' ') || line.starts_with('\t') {
                 current_line.push_str(line);
             } else {
                 if !current_line.is_empty() {
@@ -434,7 +463,8 @@ pub fn format_reply(from: &str, message: impl AsRef<str>) -> Result<String, std:
                 Header::Date(x) => format!("Date: {}", x),
                 Header::MessageID(x) => format!("Message-ID: {}", x),
                 Header::MimeVersion => "MIME-Version: 1.0".to_string(),
-                Header::ContentType => "Content-Type: text/plain; charset=us-ascii".to_string(),
+                // We accept ascii, we emit utf-8
+                Header::ContentType => "Content-Type: text/plain; charset=utf-8".to_string(),
                 Header::References(x) => format!("References: {}", x),
                 Header::ContentDisposition => "Content-Disposition: inline".to_string(),
                 Header::InReplyTo(x) => format!("In-Reply-To: {}", x),
