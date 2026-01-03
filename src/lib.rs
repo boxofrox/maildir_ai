@@ -266,13 +266,18 @@ impl Header {
                 current_line.push_str(line);
             } else {
                 if !current_line.is_empty() {
-                    headers.push(current_line.parse::<Header>()?);
+                    let Ok(header) = current_line.parse::<Header>() else {
+                        continue;
+                    };
+                    headers.push(header);
                 }
                 current_line = line.to_string();
             }
         }
         if !current_line.is_empty() {
-            headers.push(current_line.parse::<Header>()?);
+            if let Ok(header) = current_line.parse::<Header>() {
+                headers.push(header);
+            }
         }
         Ok(headers)
     }
