@@ -341,7 +341,13 @@ impl FromStr for Header {
 pub fn extract_to(message: impl AsRef<str>) -> Option<String> {
     let message = message.as_ref();
     let (header_block, _) = message.split_once("\n\n").unwrap_or(("", ""));
-    let headers = Header::from_block(header_block).ok()?;
+    let headers = match Header::from_block(header_block) {
+        Ok(x) => x,
+        Err(err) => {
+            eprintln!("error: {:?}", err);
+            return None;
+        }
+    };
     if let Some(Header::To(to)) = headers
         .iter()
         .find(|header| matches!(header, Header::To(_)))
